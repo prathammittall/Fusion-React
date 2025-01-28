@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { login } from './utils.js';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-// import HomePage from "./HomePage";
-import LoginPage from "./login";
-
 
 const App = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -44,7 +41,7 @@ const App = () => {
               <li><a href="#services-container">Services</a></li>
               <li><a href="#meetOurTeam">Team</a></li>
               <li><a href="#questions-container">FAQs</a></li>
-                <li><a href='/login.js'><button id="register-btn">Register</button></a></li>
+                <li><a href='./login.html'><button id="register-btn">Register</button></a></li>
 
             </ul>
           </div>

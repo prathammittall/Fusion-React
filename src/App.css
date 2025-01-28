@@ -159,7 +159,7 @@ nav {
 
 .main h1 {
     padding-bottom: 20px;
-    font-size: 75px;
+    font-size: 60px;
     margin-bottom: 20px;
     text-shadow: 10px 15px 10px black;
     font-family: "BerkshireSwash-Regular";
@@ -169,6 +169,12 @@ nav {
     white-space: nowrap;
     overflow: hidden;
     animation: typing steps(20, end) forwards infinite 6s;
+}
+
+.typing {
+    width: 600px;
+    position: relative;
+    left: 70px;
 }
 
 @keyframes typing {
