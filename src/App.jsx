@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// import HomePage from "./HomePage";
+import LoginPage from "./login";
+
 
 const App = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [navbarColor, setNavbarColor] = useState('transparent');
+
 
   const handleMenuToggle = () => {
     setMenuActive(prevState => !prevState);
@@ -20,7 +25,7 @@ const App = () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    return () => {
+    return () => {  
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -39,7 +44,8 @@ const App = () => {
               <li><a href="#services-container">Services</a></li>
               <li><a href="#meetOurTeam">Team</a></li>
               <li><a href="#questions-container">FAQs</a></li>
-              <li><a href="Login.html"><button id="register-btn">Register</button></a></li>
+                <li><a href='/login.js'><button id="register-btn">Register</button></a></li>
+
             </ul>
           </div>
           <div className="toggler" id="toggler" onClick={handleMenuToggle}>
@@ -61,7 +67,7 @@ const App = () => {
                     <h1>DECODE YOUR DNA</h1>
                 </div>
             </div>
-          <a href="form.html"><button className="button">
+          <a href="./form.html"><button className="button">
             <span className="button_lg">
               <span className="button_sl"></span>
               <span className="button_text">Get Started</span>
